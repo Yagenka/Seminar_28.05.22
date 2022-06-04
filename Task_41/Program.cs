@@ -3,14 +3,14 @@
 // 0, 7, 8, -2, -2 -> 2
 // -1, -7, 567, 89, 223-> 3
 
-
-Console.Write($"Какое количество чисел необходимо ввести - ");
+Console.Write($"Определите количество чисел необходимых для ввода - ");
 int m = int.Parse(Console.ReadLine());
 
 Console.WriteLine($"Введите {m} чисел:");
-
-
 int[] array = new int[m];
+
+void PositiveDigit(int[] array)
+{
 int count = 0;
 for (int i = 0; i < m; i++)
 {
@@ -19,6 +19,7 @@ for (int i = 0; i < m; i++)
 }
 Console.Write("В введенных числах ");
 Console.WriteLine(String.Join(" ", array));
-Console.WriteLine($"Количество чисел больше нуля - {count}");
+Console.WriteLine($"Количество чисел больше нуля равно {count}");
+}
 
-
+PositiveDigit(array);
